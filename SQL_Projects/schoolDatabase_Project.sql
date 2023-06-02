@@ -66,5 +66,5 @@ ORDER BY studentName;
 -- Selects all classes, with the students and instructors assigned to each
 SELECT className, studentName, instructorName 
 FROM tblClasses
-	INNER JOIN tblStudents ON tblClasses.className = tblStudents.studentName
-	INNER JOIN tblInstructors ON tblClasses.className = tblInstructors.instructorName;
+	INNER JOIN tblStudents ON tblClasses.classID = tblStudents.classID
+	INNER JOIN tblInstructors ON tblStudents.instructorID = tblInstructors.instructorID;
